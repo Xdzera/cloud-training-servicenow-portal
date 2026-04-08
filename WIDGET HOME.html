@@ -1,0 +1,94 @@
+<div class="ct-home-shell">
+  <div class="ct-hero">
+    <div class="ct-hero-badge">
+      <i class="fa fa-cloud"></i>
+      
+    </div>
+
+    <h1>Portal de Reserva de Salas</h1>
+    <p>
+      Centralize reservas, acompanhe disponibilidade e mantenha a experiência do portal
+      alinhada com o padrão visual da Cloud Training.
+    </p>
+  </div>
+
+  <div class="ct-user-line">
+    <span class="ct-user-label">Usuário logado</span>
+    <strong>{{data.user_name}}</strong>
+  </div>
+
+  <div ng-if="data.view == 'manager'" class="ct-role-area">
+    <div class="ct-section-title">
+      <h3>Bem-vindo Manager</h3>
+      <p>Gerencie reservas, monitore o calendário de reservas e analise feedbacks em um só lugar.</p>
+    </div>
+
+    <div class="ct-card-grid">
+      <a class="ct-glass-card primary" href="?id=room_booking">
+        <div class="ct-card-icon"><i class="fa fa-calendar-plus-o"></i></div>
+        <h4>Reserva de Sala</h4>
+        <p>Crie reservas para você ou para outros usuários com uma experiência guiada.</p>
+        <span class="ct-card-link">Acessar <i class="fa fa-arrow-right"></i></span>
+      </a>
+
+      <a class="ct-glass-card secondary" href="?id=room_management">
+        <div class="ct-card-icon"><i class="fa fa-th-large"></i></div>
+        <h4>Gerência de Salas</h4>
+        <p>Visualize o calendário mensal e clique no dia para ver todas as reservas.</p>
+        <span class="ct-card-link">Acessar <i class="fa fa-arrow-right"></i></span>
+      </a>
+
+      <a class="ct-glass-card tertiary" href="?id=ct_room_feedback">
+        <div class="ct-card-icon"><i class="fa fa-commenting-o"></i></div>
+        <h4>Feedbacks</h4>
+        <p>Acompanhe a percepção dos usuários e evolua continuamente a experiência.</p>
+        <span class="ct-card-link">Acessar <i class="fa fa-arrow-right"></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div ng-if="data.view == 'requester'" class="ct-role-area">
+    <div class="ct-section-title">
+      <h3>Seja bem-vindo</h3>
+      <p>Faça reservas e acompanhe suas solicitações com mais clareza.</p>
+    </div>
+
+    <div class="ct-card-grid">
+      <a class="ct-glass-card primary" href="?id=room_booking">
+        <div class="ct-card-icon"><i class="fa fa-calendar-check-o"></i></div>
+        <h4>Reserva de Sala</h4>
+        <p>Utilize o calendário e realize sua reserva.</p>
+        <span class="ct-card-link">Acessar <i class="fa fa-arrow-right"></i></span>
+      </a>
+
+      <a class="ct-glass-card secondary" href="?id=room_management">
+        <div class="ct-card-icon"><i class="fa fa-folder-open-o"></i></div>
+        <h4>Minhas Reservas</h4>
+        <p>Consulte suas datas reservadas no calendário.</p>
+        <span class="ct-card-link">Acessar <i class="fa fa-arrow-right"></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div ng-if="data.view == 'student'" class="ct-role-area">
+    <div class="ct-section-title">
+      <h3>Bem-vindo Aluno</h3>
+      <p>Consulte as salas reservadas vinculadas aos cursos em que você está inscrito.</p>
+    </div>
+
+    <div class="ct-card-grid single">
+      <a class="ct-glass-card primary" href="?id=room_management">
+        <div class="ct-card-icon"><i class="fa fa-graduation-cap"></i></div>
+        <h4>Minhas Salas</h4>
+        <p>Veja em calendário as salas reservadas para os cursos em que você está matriculado.</p>
+        <span class="ct-card-link">Acessar <i class="fa fa-arrow-right"></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div ng-if="data.view == 'guest'" class="ct-empty-state">
+    <i class="fa fa-lock"></i>
+    <h4>Acesso não disponível</h4>
+    <p>Seu usuário não possui role válida para este portal.</p>
+  </div>
+</div>
